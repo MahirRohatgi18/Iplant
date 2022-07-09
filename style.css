@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
+:root {
+  /* Colors */
+  --primary-100: #e0deff;
+  --primary-200: #c1beff;
+  --primary-300: #a29dff;
+  --primary-400: #837dff;
+  --primary-500: #645cff;
+  --primary-600: #504acc;
+  --primary-700: #3c3799;
+  --primary-800: #282566;
+  --primary-900: #141233;
+
+  --gray-50: #f8fafc;
+  --gray-100: #f1f5f9;
+  --gray-200: #e2e8f0;
+  --gray-300: #cbd5e1;
+  --gray-400: #94a3b8;
+  --gray-500: #64748b;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1e293b;
+  --gray-900: #0f172a;
+
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  /* Fonts */
+  --headingFont: 'Roboto', sans-serif;
+  --bodyFont: 'Nunito', sans-serif;
+  --small-text: 0.7em;
+
+  /* Rest Variables */
+  --background-color: var(--gray-100);
+  --textColor: var(--gray-900);
+  --borderRadius: 0.25rem;
+  --letterSpacing: 1px;
+  --transition: all 2s ease-in-out;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+
+  /* Box Shadow */
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+body {
+  background: rgb(228, 226, 205);
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+img {
+  width: 100%;
+  display: block;
+}
+.card {
+  width: 50vw;
+  margin: 10rem auto;
+  /* padding: 5rem 0; */
+  height: 100vh;
+  margin-bottom: calc(100vh - 60vh);
+  position: relative;
+  /* background-color: white; */
+}
+.card-pic-wrap {
+  /* background-color: white; */
+  border-radius: var(--borderRadius);
+  height: 100%;
+}
+.card-pic-wrap img {
+  border-radius: var(--borderRadius);
+  object-fit: cover;
+  transform: translate(0, -20%);
+}
+
+.card-front {
+  transition: var(--transition);
+  background-color: white;
+  height: 100%;
+}
+.card-back {
+  background-color: rgb(200, 238, 200);
+  transform: rotateY(180deg);
+  transition: var(--transition);
+  height: 100%;
+}
+.card:hover .card-front {
+  transform: rotateY(180deg);
+}
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+.card-side {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.card-back {
+  text-align: center;
+}
+.logo {
+  border-radius: 10rem;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.main-heading {
+  font-size: 2rem;
+  text-align: center;
+}
